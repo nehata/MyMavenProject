@@ -1,0 +1,21 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="TestNGsuite" verbose="1" parallel="tests" thread-count="2">
+
+<listeners>
+  		<listener class-name="org.uncommons.reportng.HTMLReporter"/>
+       	<listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+</listeners>
+	<test name="TestNGTest">
+		<groups>
+			<run>
+				<include name="database" />
+				<include name="selenium-test" />
+			</run>
+		</groups>
+		<classes>
+			<class name="com.test.demo.TestNGGroupsAnnotationsDemo"></class>
+		</classes>
+	</test>
+</suite>
